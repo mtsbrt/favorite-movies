@@ -1,3 +1,56 @@
-<div>
-    Profile Component
+<div class="container" id="content">
+    <div class="row">
+        <div class="col-md-6">
+            <h1 id="presentation-text">It's time to create your profile and customize your experience in <b>LinkApi Movies</b>!</h1>
+        </div>
+        <div class="col-md-5 ml-5">
+            <form [formGroup]="formProfile" (ngSubmit)="saveProfile()">
+                <div class="row">
+                    <div class="col-md-12">
+                        <mat-form-field>
+                            <mat-label>Name</mat-label>
+                            <input matInput [formControl]="formProfile.controls.name" placeholder="John Wick">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <mat-form-field>
+                            <mat-label>Age</mat-label>
+                            <input matInput [formControl]="formProfile.controls.age" placeholder="24">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <mat-form-field>
+                            <mat-label>Favorite Movie</mat-label>
+                            <input matInput [formControl]="formProfile.controls.favoriteMovie" placeholder="Sharknado 2">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <mat-form-field>
+                            <mat-label>Genre</mat-label>
+                            <mat-select [formControl]="formProfile.controls.favoriteGenre">
+                                <mat-option *ngFor="let genre of genres" [value]="genre">
+                                  {{genre}}
+                                </mat-option>
+                              </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-12">
+                        <div style="float:right;">
+                            <button mat-button type="button">Cancel</button>
+                            &nbsp;
+                            <button mat-button class="primary" type="submit">Save Profile</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>

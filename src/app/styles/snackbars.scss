@@ -1,0 +1,7 @@
+snack-bar-container {
+    background: white;
+    &.success{
+        background: #3CC896;
+        color: #FCFCFC;
+    }
+}

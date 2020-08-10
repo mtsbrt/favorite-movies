@@ -1,0 +1,23 @@
+#content {
+    margin-top: 10%;
+}
+
+#presentation-text {
+    text-align: right;
+    font: Regular 28px/38px Metropolis;
+    letter-spacing: 0px;
+    color: #637463;
+    opacity: 1;
+}
+
+button {
+    color: #A0AFA0;
+    &:focus {
+        outline: 0;
+    }
+    &.primary {
+        background-color: #3CC896; 
+        color: white
+    }
+}
+
