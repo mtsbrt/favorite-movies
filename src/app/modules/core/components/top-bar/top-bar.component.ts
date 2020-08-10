@@ -21,7 +21,6 @@ export class TopBarComponent implements OnInit {
 
     public isOnProfilePage(): boolean {
         if (this._router.url.includes('profile')) {
-            console.log(this.showUser);
             return true;
         }
         return false;

@@ -38,7 +38,6 @@ export class MovieListComponent implements OnInit {
     }
 
     public searchMovies(keyword) {
-        console.log('hi');
         if (!this.isFavorites) {
             this.moviesService.search(keyword, 1).subscribe(res => {
                 this.unfilteredMovies = res.Search;
@@ -56,7 +55,6 @@ export class MovieListComponent implements OnInit {
     }
 
     public toggleFavorites() {
-        console.log('hi');
         if (!this.isFavorites) {
             this.isFavorites = true;
             this.unfilteredMovies = JSON.parse(localStorage.getItem('favoriteMovies'));

@@ -27,7 +27,6 @@ export class MoviesComponent implements OnInit, OnChanges {
 
     public turnMoviesIntoRows(movies: Array<Object>) {
         if (movies.length > 0) {
-            console.log('hi');
             const rows = [];
             let rowOfMovies = [];
             while (movies.length > 0) {
@@ -35,9 +34,7 @@ export class MoviesComponent implements OnInit, OnChanges {
                 if (rowOfMovies.length === 6 || movies.length === 0) {
                     rows.push(rowOfMovies);
                     rowOfMovies = [];
-                    console.log(rows);
                 }
-                console.log(rowOfMovies);
             }
             this.rows = rows;
         }
