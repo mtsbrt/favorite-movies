@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-1 return-text" (click)="returnToList()">
+            <i class="fas fa-arrow-left inline-icon"></i>&nbsp;<span>Return</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row mt-5 mb-2">
+                <div class="col-md-12 title-text">
+                    <h1>{{movie?.Title}}</h1>
+                </div>
+            </div>
+            <div class="row mt-5 mb-4">
+                <div class="col-md-4 info-text">
+                    <i class="far fa-calendar inline-icon"></i>&nbsp;<span>{{movie?.Year}}</span>
+                </div>
+                <div class="col-md-4 info-text">
+                    <i class="far fa-clock inline-icon"></i>&nbsp;<span>{{movie?.Runtime}}</span>
+                </div>
+                <div class="col-md-4 info-text">
+                    <span>{{movie?.Rated}}</span>
+                </div>
+            </div>
+            <div clas="row mb-5">
+                <div class="col-md-12 info-text"*ngIf="!movieIsFavorite(movie)" (click)="favoriteMovie(movie)">
+                    <i class="far fa-heart favorite-icon" ></i> &nbsp; Mark as Favorite
+                </div>
+                <div class="col-md-12 info-text"*ngIf="movieIsFavorite(movie)" (click)="undoFavorite(movie)">
+                    <i class="fas fa-heart favorite-icon" *ngIf="movieIsFavorite(movie)"></i> &nbsp; Undo Favorite
+                </div>
+            </div>
+            <div class="row mt-5 mb-5">
+                <div class="synopsis-text">
+                    {{movie?.Plot}}
+                </div>
+            </div>
+            <div class="row mt-5 mb-2">
+                <div class="col-md-5 light-info-text">
+                    Cast
+                </div>
+                <div class="col-md-3 light-info-text">
+                    Genre
+                </div>
+                <div class="col-md-4 light-info-text">
+                    Director
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-5 medium-info-text">
+                    {{movie?.Actors}}
+                </div>
+                <div class="col-md-3 medium-info-text">
+                    {{movie?.Genre}}
+                </div>
+                <div class="col-md-4 medium-info-text">
+                    {{movie?.Director}}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img [src]="movie?.Poster" [alt]="'Poster of the Movie ' + movie.Title" height="650" width="443">
+        </div>
+    </div>
+</div>

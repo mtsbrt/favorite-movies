@@ -8,11 +8,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CoreModule } from '../core/core.module';
 import { MoviesComponent } from './components/movie-list/movies/movies.component';
+import { MovieComponent } from './components/movie/movie.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
     declarations: [
         MovieListComponent,
-        MoviesComponent
+        MoviesComponent,
+        MovieComponent
     ],
     imports: [
         CommonModule,
@@ -21,7 +24,8 @@ import { MoviesComponent } from './components/movie-list/movies/movies.component
         MatIconModule,
         MatButtonModule,
         ReactiveFormsModule,
-        CoreModule
+        CoreModule,
+        MatSnackBarModule
     ],
     exports: []
 })

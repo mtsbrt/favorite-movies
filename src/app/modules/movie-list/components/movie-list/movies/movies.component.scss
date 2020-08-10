@@ -5,6 +5,9 @@
 }
 
 .movie-container {
+    &:hover {
+        cursor: pointer;
+    }
     i {
         position: absolute;
         top: 0;

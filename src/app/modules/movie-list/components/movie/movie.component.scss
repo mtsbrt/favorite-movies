@@ -1,0 +1,71 @@
+.return-text {
+    font-size: 17px;
+    color:#A3B2A3;
+    &:hover {
+        color: #94a094;
+        cursor: pointer;
+    }
+}
+
+.inline-icon {
+    display: inline;
+}
+
+.title-text {
+    h1{
+        text-align: left;
+        font-family: 'Metropolis';
+        font-weight: bold;
+        font-size: 40px;
+        letter-spacing: 0px;
+        color: #414641;
+        opacity: 1;
+    }
+}
+
+.info-text {
+    text-align: left;
+    font-family: 'Metropolis';
+    font-weight: bold;
+    font-size: 26px;
+    letter-spacing: 0px;
+    color: #414641;
+    opacity: 1;
+}
+
+.favorite-icon {
+    color: red;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.synopsis-text {
+    text-align: left;
+    font-family: 'Metropolis';
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #637463;
+    opacity: 1;
+}
+
+.light-info-text {
+    text-align: left;
+    font-family: 'Metropolis';
+    font-size:20px;
+    font-weight: 300;
+    letter-spacing: 0px;
+    color: #637463;
+    opacity: 1;
+}
+
+.medium-info-text {
+    text-align: left;
+    font-weight: 500;
+    font-family: 'Metropolis';
+    font-size: 18px;
+    letter-spacing: 0px;
+    color: #414641;
+    opacity: 1;
+}

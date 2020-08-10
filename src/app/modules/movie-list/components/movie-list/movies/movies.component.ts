@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, OnChanges, ɵConsole } from "@angular/core";
 import { Movie } from 'src/app/modules/core/models/movie';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-movies',
@@ -12,7 +13,7 @@ export class MoviesComponent implements OnInit, OnChanges {
 
     public rows = [];
 
-    constructor() {
+    constructor(private _router: Router) {
 
     }
 
@@ -40,5 +41,17 @@ export class MoviesComponent implements OnInit, OnChanges {
             }
             this.rows = rows;
         }
+    }
+
+    public movieIsFavorite(movie: Movie) {
+        const favoriteMovies: Array<Movie> = [].concat(JSON.parse(localStorage.getItem('favoriteMovies'))).filter(x => x !== null);
+        if (favoriteMovies.length > 0) {
+            return favoriteMovies.find(register => register.imdbID === movie.imdbID) ?  true : false;
+        }
+        return false;
+    }
+
+    public goToMovie(movie: Movie) {
+        this._router.navigateByUrl(`/movie/${movie.imdbID}`);
     }
 }
