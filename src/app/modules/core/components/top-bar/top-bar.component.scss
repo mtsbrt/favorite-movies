@@ -12,4 +12,8 @@
 #user-icon {
     font-size: 35px;
     color: #A0AFA0;
+    cursor: pointer;
+    &:hover {
+        color:#8f9b8ff1;
+    }
 }

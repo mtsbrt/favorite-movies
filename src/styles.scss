@@ -8,6 +8,17 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+button {
+    &:focus {
+        outline: 0;
+    }
+    &.primary {
+        background-color: #3CC896; 
+        color: white;
+    }
+}
+
 .full-width {
     width: 100%;
 }
+

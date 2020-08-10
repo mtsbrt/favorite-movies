@@ -12,12 +12,7 @@
 
 button {
     color: #A0AFA0;
-    &:focus {
-        outline: 0;
-    }
     &.primary {
-        background-color: #3CC896; 
-        color: white
+        color: white;
     }
 }
-
