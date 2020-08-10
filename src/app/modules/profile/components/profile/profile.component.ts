@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-profile',
@@ -12,7 +13,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class ProfileComponent implements OnInit {
 
     public formProfile: FormGroup = this._formBuilder.group({
-        name: ['', Validators.required],
+        name: [''],
         age: [''],
         favoriteMovie: [''],
         favoriteGenre: ['Horror']
@@ -22,7 +23,8 @@ export class ProfileComponent implements OnInit {
 
     constructor(
         private _formBuilder: FormBuilder,
-        private _snackBar: MatSnackBar
+        private _snackBar: MatSnackBar,
+        private _router: Router
         ) { }
 
     public ngOnInit() {
@@ -54,5 +56,10 @@ export class ProfileComponent implements OnInit {
             duration: 1000,
             panelClass: 'success'
         });
+        this.redirectToMovies();
+    }
+
+    public redirectToMovies() {
+        this._router.navigateByUrl('/movies');
     }
 }

@@ -1,13 +1,13 @@
 <div class="container">
     <div class="row mt-4">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="logo">
                 <img class="mb-2" src="../../../../../assets/logo-verde.svg" alt="LinkApi Movies Logo" width="200" height="40">
                 <span>movies</span>
             </div>
         </div>
-        <div class="col-md-4" *ngIf="!isOnProfilePage()">
-            <i class="fas fa-user-circle" id="user-icon"></i>
+        <div class="col-md-2" *ngIf="!isOnProfilePage()">
+            <i class="fas fa-user-circle" id="user-icon" (click)="redirectToProfile()"></i>
         </div>
     </div>
 </div>

@@ -27,4 +27,8 @@ export class TopBarComponent implements OnInit {
         return false;
     }
 
+    public redirectToProfile() {
+        this._router.navigateByUrl('/profile');
+    }
+
 }
